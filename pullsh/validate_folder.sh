@@ -29,7 +29,7 @@ check_git_folder_sync() {
         echo "None"
     elif [ "$(git rev-list --count "$local_commit".."$upstream_commit")" -gt 0 ]; then
         echo "pull"
-    elif [ "$(git rev-list --count "$upstream_commit".."$local_com i mit")" -gt 0 ]; then
+    elif [ "$(git rev-list --count "$upstream_commit".."$local_commit")" -gt 0 ]; then
         echo "push"
     fi
 }
