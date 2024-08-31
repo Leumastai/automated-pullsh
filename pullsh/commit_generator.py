@@ -24,7 +24,7 @@ def generate_commit_name():
 
     unix_time = int(time.time())
     
-    return f"{funky}-{adjective}-{animal}_{unix_time}"
+    return f"{funky.lower()}-{adjective.lower()}-{animal.lower()}_{unix_time}"
 
 if __name__ == "__main__":
     print (generate_commit_name())
