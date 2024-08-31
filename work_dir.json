@@ -1,0 +1,15 @@
+{
+    "sync_folders": [
+        "/home/alijoe/Documents/Projects/git_projects",
+        "/home/alijoe/.config",
+        "/home/alijoe/Documents/Tezda Codebase/tezda-personalize",
+        "/home/alijoe/Documents/bashScripts",
+        "/home/alijoe/Documents/mySuckless"
+    ],
+    "sync_directories": [
+        "/home/alijoe/Documents/Snapnet Codebase/snapnet-codebase",
+        "/home/alijoe/Documents/Projects"
+    ]
+
+}
+
