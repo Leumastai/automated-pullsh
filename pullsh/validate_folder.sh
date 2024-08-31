@@ -14,7 +14,12 @@ check_git_folder_sync() {
     local_branch=$(git rev-parse --abbrev-ref HEAD)
 
     ## Get upstream branch tracking the remote
-    upstream_branch=$(git rev-parse --abbrev-ref "@{upstream}")
+    # if no upstream, return push to upstream
+    # upstream_branch=$(git rev-parse --abbrev-ref "@{upstream}")
+    if ! upstream_branch=$(git rev-parse --abbrev-ref "@{upstream}" 2>/dev/null); then
+        echo "push"
+        return 0
+    fi
 
     # Get the commit hashes of the local and upstream branches
     local_commit=$(git rev-parse "$local_branch")
